@@ -105,7 +105,9 @@
         <h3>Recent Projects</h3>
         <div class="project-list">
           <div v-for="project in projects" :key="project.name" class="project">
-            <h4>{{ project.name }}</h4>
+            <h4>
+              <a :href="project.url" target="_blank">{{ project.name }}</a>
+            </h4>
             <p>{{ project.description }}</p>
           </div>
         </div>
@@ -149,12 +151,27 @@
           { platform: 'GitHub', url: 'https://github.com/PKief' }
         ],
         projects: [
-          { name: 'Material Icon Theme', description: 'Icon theme for VS Code' },
-          { name: 'Material Color Converter', description: 'Convert colors' }
+          { 
+            name: 'edTech online education platform', 
+            description: 'An edtech platform is a digital tool that provides interactive and accessible learning experiences.', 
+            url: 'https://github.com/visualGravitySense/bisonWese-edTech'
+          },
+          { 
+            name: 'Aawra service for beauty salons', 
+            description: 'Offering a comprehensive suite of tools to streamline operations and enhance customer experiences.', 
+            url: 'https://github.com/visualGravitySense/aawraOnline'
+          },
+          { 
+            name: 'Website for car driving school', 
+            description: 'The website is designed to increase bookings and enhance customer satisfaction.', 
+            url: 'https://github.com/visualGravitySense/CarDrivingSchool'
+          },
+          
         ],
         articles: [
-          { title: 'Global Error Handling in Angular', link: '#', description: 'Description about artiles' },
-          { title: 'Automatic Dark Mode Detection in Angular', link: '#', description: 'Description about artiles' }
+          { title: 'Tailwind CSS vs. Bootstrap', link: '#', description: 'A Comparison of Approaches — Flexibility vs. Pre-Built Solutions.' },
+          { title: 'Tailwind CSS: A Revolution in Web Application Styling', link: '#', description: 'A Comparison of Approaches — Flexibility vs. Pre-Built Solutions' },
+          { title: 'Why UI/UX Design Can Actually Break a Product', link: '#', description: "Today, UI/UX design is often seen as crucial to a product's success. However, in the pursuit of perfect interfaces, many companies lose sight of the primary goal." }
         ]
       };
     }
@@ -176,7 +193,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr; /* Asymmetric layout */
   gap: 20px;
-  transform: rotate(-1deg); /* Slightly off balance for creative effect */
+  /* transform: rotate(-1deg);  Slightly off balance for creative effect */
   max-width: 900px;
   margin: auto;
 }
@@ -185,7 +202,7 @@
   width: 150px;
   border-radius: 50%; /* Soft rounded image for a modern feel */
   filter: grayscale(80%); /* Muted grayscale look */
-  transform: rotate(5deg); /* Slight tilt for creative imbalance */
+  /*transform: rotate(5deg);  Slight tilt for creative imbalance */
   margin-bottom: 20px;
   border: 5px solid #ddd;
 }
@@ -196,7 +213,7 @@ h1 {
   font-weight: bold;
   margin-bottom: 5px;
   letter-spacing: -0.5px;
-  transform: rotate(-2deg); /* Slight text rotation for character */
+  /*transform: rotate(-2deg);  Slight text rotation for character */
 }
 
 h2 {
@@ -261,7 +278,7 @@ p {
   padding: 40px;
   border: 2px solid #ddd;
   margin: 40px 0;
-  transform: rotate(-1deg); /* Subtle creative twist */
+  /*transform: rotate(-1deg);  Subtle creative twist */
 }
 
 .projects h3 {
@@ -284,11 +301,11 @@ p {
   padding: 20px;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform: rotate(-0.5deg); /* Slight tilt */
+  /*transform: rotate(-0.5deg);  Slight tilt */
 }
 
 .project:hover {
-  transform: scale(1.05) rotate(0deg); /* Smooth interaction */
+  transform: scale(1.05) rotate(-0.5deg); /* Smooth interaction */
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -311,7 +328,7 @@ p {
   padding: 50px;
   border: 2px solid #ddd;
   margin: 40px 0;
-  transform: rotate(1deg); /* Slight rotation for creative touch */
+  /*transform: rotate(1deg);  Slight rotation for creative touch */
 }
 
 .articles h3 {
@@ -319,7 +336,7 @@ p {
   color: #333;
   letter-spacing: -0.5px;
   margin-bottom: 30px;
-  transform: rotate(-1deg); /* Creative tilt */
+   /*transform: rotate(-1deg); Creative tilt */
 }
 
 /* Article Card Grid */
@@ -336,12 +353,12 @@ p {
   padding: 20px;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform: rotate(-0.5deg); /* Slight creative rotation */
+  /*transform: rotate(-0.5deg);  Slight creative rotation */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 
 .article:hover {
-  transform: scale(1.05) rotate(0deg); /* Interactive hover effect */
+  transform: scale(1.05) rotate(-0.5deg); /* Interactive hover effect */
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
 }
 
