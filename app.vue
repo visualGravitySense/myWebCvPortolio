@@ -27,44 +27,47 @@
         </div>
       </div> -->
 
+      <div class="hero-section">
+
+        <div class="skills-section">
+          <div class="inline-badge">UI/UX Design</div>
+          <div class="blue-badge">Front-End</div>
+          <div class="star-badge">Back-End</div>
+          <div class="black-badge">Expertise in Vue<br>and React</div>
+          <div class="yellow-badge">Back-end mastery<br>with Python</div>
+          <span class="email-emoji"><a class="emoji-link" href="mailto:dmitri.gornakov@gmail.com">📧</a></span>
+          <span class="phone-emoji"><a class="emoji-link" href="tel:+37258976398">☎️</a></span>
+          <div class="social-links">
+            <div class="git-ico"><Gitico/></div>
+            <div class="in-ico"><Inico/></div>
+          </div>
+        
+      </div>
+        
+        <img src="@/assets/img/profile-pic.jpg" alt="Profile Picture" class="profile-pic" />
+          <h1 class="headline">Dmitri Gornakov</h1>
+          <h2 class="sub-headline">CREATIVE <span class="highlight">TECHNOLOGIST</span></h2>
+        
+        <div class="content-wrapper">
+          
+          <p class="paragraph">I craft standout digital experiences by seamlessly blending UI/UX design, front-end expertise in Vue.js and React, and back-end mastery with Python. My diverse skill set allows me to build innovative, user-focused products from concept to code.</p>
+        </div>        
+        <!-- <img src="@/assets/img/profile-pic.jpg" alt="Profile Picture" class="profile-pic" /> -->
+        <br>
+        <a href="mailto:dmitri.gornakov@gmail.com" class="btn-primary">Hire Me</a>
+
+      </div>
+
+      
+
       <div class="profile">
-        <img src="@/assets/img/profile-pic.jpg" alt="Profile Picture" />
+        <!-- <img src="@/assets/img/profile-pic.jpg" alt="Profile Picture" />  -->
         <h1>{{ name }}</h1>
         <h2>{{ role }}</h2>
         <p>{{ bio }}</p>
         <div class="social-links">
 
-          <a href="https://github.com/visualGravitySense" target="_blank">
-              <svg
-                class="w-6 h-6 text-white-600 hover:text-gray-800 button--github"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                width="32"
-                height="32"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2.247a10 10 0 0 0-3.162 19.487c.5.088.687-.212.687-.475c0-.237-.012-1.025-.012-1.862c-2.513.462-3.163-.613-3.363-1.175a3.636 3.636 0 0 0-1.025-1.413c-.35-.187-.85-.65-.013-.662a2.001 2.001 0 0 1 1.538 1.025a2.137 2.137 0 0 0 2.912.825a2.104 2.104 0 0 1 .638-1.338c-2.225-.25-4.55-1.112-4.55-4.937a3.892 3.892 0 0 1 1.025-2.688a3.594 3.594 0 0 1 .1-2.65s.837-.262 2.75 1.025a9.427 9.427 0 0 1 5 0c1.912-1.3 2.75-1.025 2.75-1.025a3.593 3.593 0 0 1 .1 2.65a3.869 3.869 0 0 1 1.025 2.688c0 3.837-2.338 4.687-4.563 4.937a2.368 2.368 0 0 1 .675 1.85c0 1.338-.012 2.413-.012 2.75c0 .263.187.575.687.475A10.005 10.005 0 0 0 12 2.247z" fill="" />
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/dmitri-gornakov-7a664840/" target="_blank">
-              <svg
-                class="w-6 h-6 text-white-600 hover:text-blue-800 button--linkedin"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                width="32"
-                height="32"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path d="M4.98 3.5c0 .92-.75 1.67-1.68 1.67H3.3c-.92 0-1.68-.75-1.68-1.67S2.38 1.83 3.3 1.83c.93 0 1.68.75 1.68 1.67zm.02 4.17H1v14h3.96v-14zm7.92 0H9v14h3.96v-7.64c0-3.64 4.81-3.94 4.81 0v7.64H21v-8.98c0-7.36-8.48-7.11-10.08-3.48V7.67h-.02z" fill="" />
-              </svg>
-            </a>
-
+          
 <!--             
           <a v-for="link in socialLinks" :href="link.url" :key="link.platform">
             {{ link.platform }}
@@ -139,7 +142,11 @@
   </template>
   
   <script>
+  import Gitico from '~/components/UI/Gitico.vue'
+  import Inico from '~/components/UI/Inico.vue'
+  // import Header from '~/components/Header.vue'
   export default {
+    components: { Gitico, Inico },
     data() {
       return {
         profilePic: '@/assets/img/profile-pic.jpg',
@@ -180,11 +187,200 @@
   
   <style scoped>
   .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    color: #0c0c0c;
+  background-color: #0c0c0c; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px;
+}
+
+.hero-section {
+  position: relative; /* Чтобы внутри можно было использовать абсолютное позиционирование */
+  text-align: center;
+  padding: 50px 0;
+}
+
+.headline {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.highlight {
+  color: #d4ff00; /* Neon yellow/green */
+  text-decoration: underline;
+}
+
+.sub-headline {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin: 20px 0;
+}
+
+
+
+.profile-pic {
+  z-index: 1;
+  border-radius: 50%;
+  width: 150px;
+  filter: grayscale(100%);
+  margin: 20px 0;
+  border: 5px solid #ddd;
+}
+
+.btn-primary {
+  background-color: #d4ff00;
+  color: #0c0c0c;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b2e600;
+}
+
+.skills-section {
+  position: relative; /* Создает контекст для абсолютного позиционирования */
+  z-index: 2;
+}
+
+.inline-badge {
+    position: absolute;
+    top: 15px; /* Позиция сверху */
+    left: 150px; /* Позиция слева */
+    border: 2px solid #f0eaea;
+    color: #f0eaea;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transform: rotate(-7deg); /* Поворот на 7 градусов влево */
+}
+
+.blue-badge {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    background-color: #5ceee9;
+    color: #070707;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transform: rotate(10deg); /* Поворот на 7 градусов влево */
+}
+
+.star-badge {
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    background-color: #ffcc00;
+    color: #070707;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(
+    50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%,
+    15% 85%, 0% 50%, 15% 15%);
+    font-size: 1.5rem;
+    transform: rotate(10deg); /* Поворот на 7 градусов влево */
+    font-weight: bold;
+}
+
+.black-badge {
+    position: absolute;
+    top: 30px;
+    right: 400px;
+    background-color: #6cffae;
+    color: #070707;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transform: rotate(-10deg); /* Поворот на 7 градусов влево */
+}
+
+.yellow-badge {
+    position: absolute;
+    top: 250px;
+    right: 150px;
+    background-color: #ffb73b;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transform: rotate(7deg); /* Поворот на 7 градусов влево */
+}
+
+.emoji-link {
+  text-decoration: none;
+}
+
+.email-emoji {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+  transform: rotate(-10deg); /* Поворот на 7 градусов влево */
+  font-size: 70px; /* Размер эмодзи */
+  filter: hue-rotate(320deg);  
+  display: inline-block; /* Чтобы применить фильтры */
   }
+
+
+.phone-emoji {
+  position: absolute;
+  top: 170px;
+  right: 375px;
+  transform: rotate(-10deg); /* Поворот на 7 градусов влево */
+  font-size: 80px; /* Размер эмодзи */
+  filter: hue-rotate(320deg);
+  display: inline-block; /* Чтобы применить фильтры */
+}
+
+.git-ico {
+  position: absolute;
+    top: 100px;
+    right: 250px;
+    background-color: #f7f7f7;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transform: rotate(8deg); /* Поворот на 7 градусов влево */
+
+}
+
+.in-ico {
+  position: absolute;
+    top: 50px;
+    left: 500px;
+    background-color: #007bff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transform: rotate(-7deg); /* Поворот на 7 градусов влево */
+
+}
+
+/* .in-ico:hover {
+  color: #fff;
+} */
+
+/* .social-links a:hover {
+  color: #fff;
+  background-color: #333; 
+  border-color: #333;
+} */
+
+
+.skill-badge:hover {
+  transform: scale(1.1);
   .profile {
   background-color: #f4f4f4; /* Neutral light gray background */
   color: #333; /* Dark gray text for professionalism */
@@ -196,6 +392,7 @@
   /* transform: rotate(-1deg);  Slightly off balance for creative effect */
   max-width: 900px;
   margin: auto;
+}
 }
 
 .profile img {
@@ -241,22 +438,18 @@ p {
 }
 
 .social-links a {
-  font-size: 1.2rem;
+  font-size: 3.2rem;
   text-decoration: none;
-  color: #007bff; /* Calm blue for links */
-  background-color: #f7f7f7;
+  /* color: #007bff; Calm blue for links */
+  /* background-color: #f7f7f7; */
   padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  /* border-radius: 4px; */
+  /* border: 1px solid #ccc; */
   transition: all 0.3s ease;
   /* transform: rotate(-1deg);  Subtle skew to match anti-design theme */
 }
 
-.social-links a:hover {
-  color: #fff;
-  background-color: #333; /* Professional hover effect */
-  border-color: #333;
-}
+
 
   /* .projects, .articles {
     margin-top: 50px;
@@ -279,6 +472,20 @@ p {
   border: 2px solid #ddd;
   margin: 40px 0;
   /*transform: rotate(-1deg);  Subtle creative twist */
+}
+
+.content-wrapper {
+    max-width: 800px; /* Controls the maximum width of the block */
+    margin: 0 auto; /* Centers the block horizontally */
+    padding: 20px; /* Adds some padding around the text */
+    text-align: center; /* Optional: centers the text within the block */
+}
+
+.paragraph {
+    font-size: 1.2rem; /* Adjusts the font size */
+    color: #f9f9f9; /* Text color */
+    line-height: 1.6; /* Line spacing */
+    background-color: unset;
 }
 
 .projects h3 {
@@ -375,7 +582,7 @@ p {
   letter-spacing: -0.5px;
 }
 
-.article p {
+/* .article p {
   font-size: 1rem;
   color: #666;
   line-height: 1.6;
@@ -383,7 +590,7 @@ p {
   padding: 10px;
   border-radius: 4px;
   margin: 0;
-}
+} */
 
 /* Interactive Hover Effect for Article Links */
 .article-title:hover h4 {
@@ -394,7 +601,9 @@ p {
   background-color: #f1f1f1;
 }
 
-  </style>
+
+
+</style>
   
 
   
